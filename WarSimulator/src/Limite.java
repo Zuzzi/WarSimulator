@@ -1,8 +1,6 @@
 
 import javax.swing.text.*;
 
-
-
 public class Limite extends PlainDocument {
 
 	private int limiteText;
@@ -12,8 +10,7 @@ public class Limite extends PlainDocument {
 		limiteText = limiteTextField;
 	}
 
-
-	public void insertString (int offset, String str, AttributeSet attr) throws BadLocationException {
+	public void insertString(int offset, String str, AttributeSet attr) throws BadLocationException {
 
 		if ((getLength() + str.length()) <= limiteText) {
 			super.insertString(offset, str, attr);
